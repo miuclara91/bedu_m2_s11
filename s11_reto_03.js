@@ -5,10 +5,10 @@ const processAction = (i, callback) => {
   }, Math.random() * 1000);
 };
 
-const triggerActions =   (count) => {
+const triggerActions = (count) => {
   for (let i = 1; i <= count; i++) {
      
-    processAction(i, console.log);   
+   processAction(i, console.log);   
           
   }
 };
