@@ -8,8 +8,10 @@ function log() {
   /* Opción 1 */
   //  wait().then(value => console.log(value));
 
-  /* Opción 2 */
+  /* Opción 2 
+  Uso de referencia método */
   wait().then(console.log);
+  
 }
 
 log();

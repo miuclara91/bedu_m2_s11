@@ -5,12 +5,15 @@ const processAction = (i, callback) => {
   }, Math.random() * 1000);
 };
 
+// Otra versión
 const triggerActions = (count) => {
-  for (let i = 1; i <= count; i++) {
-     
-   processAction(i, console.log);   
-          
+  const actions = [];
+  let aux = 1;
+  while(aux <=count){
+    actions.push(new Promise(resolve => processAction(aux, resolve)));
+    aux++;
   }
+  Promise.all(actions).then(console.log);
 };
 
 triggerActions(5);
